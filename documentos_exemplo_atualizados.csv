@@ -1,0 +1,51 @@
+processo,data_do_processo,data_de_abertura,departamento_atual,motivo,referencia,departamento_anterior_origem,classificacao,grau_de_acesso,procedencia,anexos,descricao
+PROC00001,2023-04-25,2023-04-25,Logística,Solicitação de compra,REF004,Recursos Humanos,Confidencial,Alto,Interno,5,Documentação relacionada à auditoria.
+PROC00002,2023-03-31,2023-03-22,TI,Solicitação de aprovação,REF002,Financeiro,Confidencial,Baixo,Interno,4,Atualização de dados cadastrais do cliente.
+PROC00003,2024-03-05,2024-03-02,TI,Atualização de cadastro,REF001,Comercial,Confidencial,Alto,Externo,2,Pedido formal de aquisição de materiais.
+PROC00004,2023-06-09,2023-06-06,Recursos Humanos,Revisão contratual,REF007,Financeiro,Confidencial,Médio,Externo,4,Pedido formal de aquisição de materiais.
+PROC00005,2023-02-14,2023-02-07,Comercial,Notificação interna,REF002,Financeiro,Público,Médio,Externo,4,Atualização de dados cadastrais do cliente.
+PROC00006,2023-03-13,2023-03-13,Logística,Atualização de cadastro,REF002,Jurídico,Confidencial,Baixo,Externo,2,Solicitação de suporte técnico.
+PROC00007,2024-01-09,2024-01-07,Recursos Humanos,Solicitação de compra,REF005,Recursos Humanos,Público,Alto,Interno,4,Solicitação enviada para departamento responsável.
+PROC00008,2023-09-08,2023-09-06,TI,Atualização de cadastro,REF009,TI,Confidencial,Alto,Externo,0,Atualização de dados cadastrais do cliente.
+PROC00009,2023-02-02,2023-01-28,TI,Revisão contratual,REF004,Recursos Humanos,Público,Alto,Externo,1,Solicitação de suporte técnico.
+PROC00010,2024-02-10,2024-01-31,TI,Atualização de cadastro,REF003,Jurídico,Confidencial,Alto,Externo,5,Registro de reunião e decisões tomadas.
+PROC00011,2024-03-14,2024-03-05,TI,Solicitação de compra,REF003,Recursos Humanos,Público,Médio,Interno,0,Relatório detalhado do andamento do processo.
+PROC00012,2023-06-06,2023-05-27,Jurídico,Notificação interna,REF010,Logística,Confidencial,Médio,Externo,4,Solicitação de suporte técnico.
+PROC00013,2023-09-15,2023-09-07,Financeiro,Revisão contratual,REF009,Logística,Restrito,Alto,Externo,0,Pedido formal de aquisição de materiais.
+PROC00014,2024-03-21,2024-03-19,TI,Atualização de cadastro,REF009,Financeiro,Confidencial,Alto,Interno,5,Pedido formal de aquisição de materiais.
+PROC00015,2023-07-23,2023-07-21,Recursos Humanos,Pedido de reembolso,REF009,Jurídico,Confidencial,Alto,Externo,3,Documento referente a processo interno de aprovação.
+PROC00016,2023-04-25,2023-04-20,Recursos Humanos,Solicitação de aprovação,REF004,Jurídico,Público,Baixo,Interno,5,Solicitação de suporte técnico.
+PROC00017,2023-03-12,2023-03-04,Jurídico,Solicitação de férias,REF009,Jurídico,Confidencial,Médio,Externo,1,Documentação relacionada à auditoria.
+PROC00018,2023-07-25,2023-07-21,TI,Relatório de progresso,REF008,Logística,Público,Médio,Interno,1,Atualização de dados cadastrais do cliente.
+PROC00019,2023-03-07,2023-03-02,Financeiro,Pedido de reembolso,REF004,Comercial,Público,Baixo,Interno,0,Documento referente a processo interno de aprovação.
+PROC00020,2023-08-23,2023-08-22,Financeiro,Revisão contratual,REF009,Recursos Humanos,Confidencial,Médio,Externo,1,Documentação relacionada à auditoria.
+PROC00021,2023-05-16,2023-05-07,Comercial,Solicitação de compra,REF008,TI,Restrito,Baixo,Interno,0,Relatório financeiro do último trimestre.
+PROC00022,2023-12-29,2023-12-23,TI,Solicitação de aprovação,REF002,TI,Confidencial,Médio,Externo,0,Atualização de dados cadastrais do cliente.
+PROC00023,2023-07-16,2023-07-13,Comercial,Encaminhamento para auditoria,REF007,TI,Confidencial,Médio,Externo,1,Relatório detalhado do andamento do processo.
+PROC00024,2024-03-29,2024-03-21,Financeiro,Pedido de reembolso,REF001,Financeiro,Confidencial,Baixo,Interno,3,Solicitação de suporte técnico.
+PROC00025,2024-05-07,2024-05-04,TI,Encaminhamento para auditoria,REF007,Financeiro,Confidencial,Médio,Externo,3,Pedido formal de aquisição de materiais.
+PROC00026,2024-03-09,2024-03-01,Logística,Solicitação de férias,REF003,Logística,Confidencial,Médio,Interno,0,Registro de reunião e decisões tomadas.
+PROC00027,2023-03-04,2023-02-27,Financeiro,Análise de risco,REF008,Financeiro,Público,Alto,Interno,0,Documentação relacionada à auditoria.
+PROC00028,2023-03-24,2023-03-22,Financeiro,Revisão contratual,REF004,Comercial,Restrito,Baixo,Interno,4,Registro de reunião e decisões tomadas.
+PROC00029,2023-02-10,2023-02-01,Financeiro,Análise de risco,REF010,TI,Público,Médio,Externo,1,Memorando para comunicação interna.
+PROC00030,2023-09-02,2023-08-29,TI,Atualização de cadastro,REF008,Jurídico,Restrito,Baixo,Interno,3,Registro de reunião e decisões tomadas.
+PROC00031,2023-04-13,2023-04-12,Comercial,Pedido de reembolso,REF005,Jurídico,Confidencial,Médio,Interno,1,Memorando para comunicação interna.
+PROC00032,2023-10-19,2023-10-17,TI,Atualização de cadastro,REF010,Comercial,Público,Alto,Interno,5,Documentação relacionada à auditoria.
+PROC00033,2023-11-03,2023-10-24,Financeiro,Atualização de cadastro,REF002,Jurídico,Confidencial,Alto,Interno,2,Pedido formal de aquisição de materiais.
+PROC00034,2023-08-04,2023-07-30,Jurídico,Atualização de cadastro,REF009,Logística,Restrito,Médio,Interno,0,Relatório financeiro do último trimestre.
+PROC00035,2023-10-11,2023-10-11,Financeiro,Encaminhamento para auditoria,REF005,Recursos Humanos,Confidencial,Alto,Externo,4,Relatório financeiro do último trimestre.
+PROC00036,2023-01-10,2023-01-09,Financeiro,Encaminhamento para auditoria,REF009,Logística,Confidencial,Médio,Interno,3,Solicitação enviada para departamento responsável.
+PROC00037,2023-02-12,2023-02-08,Recursos Humanos,Relatório de progresso,REF004,Financeiro,Público,Baixo,Interno,2,Documentação relacionada à auditoria.
+PROC00038,2024-02-21,2024-02-12,Logística,Solicitação de compra,REF003,Jurídico,Confidencial,Médio,Interno,1,Memorando para comunicação interna.
+PROC00039,2024-02-26,2024-02-16,Logística,Atualização de cadastro,REF003,Jurídico,Público,Baixo,Externo,0,Solicitação de suporte técnico.
+PROC00040,2023-08-16,2023-08-13,TI,Atualização de cadastro,REF004,Recursos Humanos,Confidencial,Baixo,Interno,3,Memorando para comunicação interna.
+PROC00041,2023-10-13,2023-10-12,Recursos Humanos,Pedido de reembolso,REF007,Recursos Humanos,Público,Alto,Externo,0,Relatório detalhado do andamento do processo.
+PROC00042,2023-09-25,2023-09-23,Comercial,Solicitação de aprovação,REF002,Recursos Humanos,Público,Médio,Externo,5,Memorando para comunicação interna.
+PROC00043,2024-03-22,2024-03-13,Comercial,Notificação interna,REF010,Financeiro,Confidencial,Médio,Interno,5,Relatório financeiro do último trimestre.
+PROC00044,2023-01-02,2022-12-25,Comercial,Solicitação de compra,REF006,Logística,Restrito,Baixo,Externo,4,Memorando para comunicação interna.
+PROC00045,2023-05-08,2023-05-04,Comercial,Notificação interna,REF006,Recursos Humanos,Restrito,Alto,Externo,4,Solicitação enviada para departamento responsável.
+PROC00046,2023-07-16,2023-07-10,Logística,Encaminhamento para auditoria,REF010,TI,Público,Médio,Externo,4,Documento referente a processo interno de aprovação.
+PROC00047,2023-11-08,2023-11-04,Jurídico,Análise de risco,REF010,TI,Público,Médio,Externo,3,Solicitação de suporte técnico.
+PROC00048,2023-08-07,2023-07-30,TI,Encaminhamento para auditoria,REF002,Logística,Restrito,Alto,Externo,0,Atualização de dados cadastrais do cliente.
+PROC00049,2023-11-14,2023-11-11,Jurídico,Solicitação de aprovação,REF001,Jurídico,Confidencial,Médio,Interno,3,Relatório financeiro do último trimestre.
+PROC00050,2023-07-19,2023-07-13,TI,Solicitação de compra,REF003,TI,Público,Alto,Interno,0,Relatório financeiro do último trimestre.
