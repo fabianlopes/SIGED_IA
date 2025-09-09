@@ -1,0 +1,11 @@
+Django>=3.2
+pandas
+scikit-learn
+xgboost
+spacy
+fastapi
+uvicorn
+joblib
+transformers
+faiss-cpu
+python-multipart
