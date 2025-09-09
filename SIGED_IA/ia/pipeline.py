@@ -41,4 +41,4 @@ def run_pipeline():
     print("8. Salvando modelo...")
     m.save_model(model, model_filename)
 
-    print("Pipeline executada com sucesso!")
+    print("Pipeline executada com sucesso!!!")

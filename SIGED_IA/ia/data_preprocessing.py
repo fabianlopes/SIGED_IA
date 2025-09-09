@@ -2,6 +2,7 @@ import pandas as pd
 import spacy
 import os
 
+
 # Carregar modelo spaCy em português (instale com: python -m spacy download pt_core_news_sm)
 nlp = spacy.load("pt_core_news_sm")
 
