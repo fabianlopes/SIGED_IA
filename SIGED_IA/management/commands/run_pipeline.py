@@ -12,12 +12,15 @@ class Command(BaseCommand):
         self.stdout.write("Iniciando pipeline...")
 
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        data_raw_path = os.path.join(base_dir, 'data', 'raw', 'documentos_exemplo_atualizados.csv')
+        data_raw_path = os.path.join(base_dir, 'data', 'documentos_exemplo_atualizados.csv')
         data_processed_path = os.path.join(base_dir, 'data', 'processed', 'documentos_processados.csv')
         vectorizer_path = os.path.join(base_dir, 'models', 'vectorizer.joblib')
         model_path = os.path.join(base_dir, 'models', 'model_rf.joblib')
 
         self.stdout.write("1. Carregando dados...")
+        print(f"Diretorio base em: {base_dir}")
+        print(f"Buscando arquivo em: {data_raw_path}")
+        print(f"Arquivo existe? {os.path.exists(data_raw_path)}")
         df = dp.load_data(data_raw_path)
 
         self.stdout.write("2. Pré-processando dados...")

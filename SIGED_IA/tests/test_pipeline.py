@@ -1,41 +1,48 @@
 import os
 import shutil
 import pytest
+from unittest import mock
+from SIGED_IA.ia import pipeline
 
-from SIGED_IA.ia.pipeline import run_pipeline
+# Caminho real do arquivo CSV original (ajuste para seu ambiente)
+ORIGINAL_CSV_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..', '..', 'SIGED_IA', 'data', 'documentos_exemplo_atualizados.csv'))
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-DATA_DIR = os.path.join(BASE_DIR, 'data')
-MODELS_DIR = os.path.join(BASE_DIR, 'models')
 
-@pytest.fixture(scope="module", autouse=True)
-def setup_and_teardown():
-    """Fixture para limpar arquivos antigos antes e depois dos testes."""
-    # Remove arquivos gerados antes do teste (se existirem)
-    processed_csv = os.path.join(DATA_DIR, 'documentos_processados.csv')
-    vectorizer_file = os.path.join(MODELS_DIR, 'vectorizer.joblib')
-    model_file = os.path.join(MODELS_DIR, 'model_rf.joblib')
+@pytest.fixture(scope="module")
+def setup_and_teardown(tmp_path_factory):
+    # Criar diretório temporário para simular raiz do projeto
+    tmp_dir = tmp_path_factory.mktemp("project_root")
 
-    for f in [processed_csv, vectorizer_file, model_file]:
-        if os.path.exists(f):
-            os.remove(f)
+    # Criar subpasta SIGED_IA/data e copiar CSV para lá
+    tmp_sigedia_dir = tmp_dir / "SIGED_IA"
+    tmp_sigedia_dir.mkdir()
+    tmp_data_dir = tmp_sigedia_dir / "data"
+    tmp_data_dir.mkdir()
+    tmp_csv_path = tmp_data_dir / "documentos_exemplo_atualizados.csv"
+    shutil.copy(ORIGINAL_CSV_PATH, tmp_csv_path)
 
-    yield  # Executa o teste
+    # Criar subpasta SIGED_IA/models vazia
+    tmp_models_dir = tmp_sigedia_dir / "models"
+    tmp_models_dir.mkdir()
 
-    # Remove arquivos gerados após o teste para limpeza
-    for f in [processed_csv, vectorizer_file, model_file]:
-        if os.path.exists(f):
-            os.remove(f)
+    yield tmp_dir, tmp_sigedia_dir, tmp_data_dir, tmp_models_dir
 
-def test_run_pipeline_creates_files():
-    # Executa a pipeline
-    run_pipeline()
 
-    # Verifica se os arquivos esperados foram criados
-    processed_csv = os.path.join(DATA_DIR, 'documentos_processados.csv')
-    vectorizer_file = os.path.join(MODELS_DIR, 'vectorizer.joblib')
-    model_file = os.path.join(MODELS_DIR, 'model_rf.joblib')
+def test_run_pipeline_creates_files(setup_and_teardown):
+    tmp_dir, tmp_sigedia_dir, tmp_data_dir, tmp_models_dir = setup_and_teardown
 
-    assert os.path.exists(processed_csv), "Arquivo de dados processados não foi criado."
-    assert os.path.exists(vectorizer_file), "Arquivo do vectorizer não foi criado."
-    assert os.path.exists(model_file), "Arquivo do modelo não foi criado."
+    # Mockar get_base_dir para apontar para tmp_sigedia_dir (SIGED_IA)
+    with mock.patch('SIGED_IA.ia.data_preprocessing.get_base_dir', return_value=str(tmp_sigedia_dir)), \
+            mock.patch('SIGED_IA.ia.feature_engineering.get_base_dir', return_value=str(tmp_sigedia_dir)), \
+            mock.patch('SIGED_IA.ia.model.get_base_dir', return_value=str(tmp_sigedia_dir)):
+        pipeline.run_pipeline()
+
+    # Verificar arquivos criados na pasta temporária SIGED_IA
+    processed_csv = tmp_data_dir / 'documentos_processados.csv'
+    vectorizer_file = tmp_models_dir / 'vectorizer.joblib'
+    model_file = tmp_models_dir / 'model_rf.joblib'
+
+    assert processed_csv.exists(), "Arquivo de dados processados não foi criado."
+    assert vectorizer_file.exists(), "Arquivo do vectorizer não foi criado."
+    assert model_file.exists(), "Arquivo do modelo não foi criado."

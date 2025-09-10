@@ -10,6 +10,7 @@ nlp = spacy.load("pt_core_news_sm")
 def get_base_dir():
     # Caminho da raiz do projeto SIGED (onde está manage.py)
     current_file = os.path.abspath(__file__)
+    print(f"arquivo base em: {current_file}")
     # sobe 3 níveis: ia/ (1), SIGED_IA/ (2), SIGED/ (3)
     return os.path.abspath(os.path.join(current_file, '..', '..', '..'))
 
